@@ -46,7 +46,8 @@ section{
     position: relative;
     overflow: hidden;
     background-color: #ffffc6;
-    border-bottom: 1px #333 solid;
+    border-bottom: 1px #333 dashed;
+    border-width: 5px;
 }
 .gong{
     width: 150px;
@@ -63,6 +64,31 @@ section{
     background-color: #000;
     border-radius: 50px;
     margin: 0 auto;
+    z-index: 1;
+}
+.nav_menu{
+    width: 150px;
+    height: 270px;
+    position: fixed;
+    z-index: 30;
+    top: 30%;
+    right: 2%;
+}
+.nav_menu> img{
+    width: 150px;
+}
+.nav_menu> nav{
+    position: absolute;
+    left: 30%;
+    bottom: 27%;
+}
+.nav_menu> nav> ul> li> a{
+    font-family: 'Cooper Std';
+    color: #000;
+}
+.nav_menu> nav> ul> li> ul> li> a{
+    font-family: 'Cooper Std';
+    color: #000;
 }
 /*---- 섹션1 ----*/
 #sct1{
@@ -79,32 +105,36 @@ section{
     overflow: hidden;
 }
 #sct2> .sct2{
-    width: 950px;
-    height: 570px;
+    width: 1000px;
+    height: 600px;
     margin: 0 auto;
-    margin-top: 90px;
+    margin-top: 100px;
+    z-index: 10;
+    background-color: #ffffc6;
 }
 .sct2> .sct2_title{
     width: 100%;
-    height: 15%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.sct2> .sct2_title> div{
+    width: 50%;
+    height: 100%;
     display: flex;
 }
-.sct2> .sct2_title> p{
+.sct2> .sct2_title> div> p{
     font-family: 'Cooper Std';
-    font-size: 50px;
-    margin-top: 5px;
+    font-size: 50px
 }
-.sct2> .sct2_title> img{
-    margin-top: 5px;
-    margin-left: 10px;
+.sct2> .sct2_title> div> img:nth-child(2){
+    width: 250px;
+    height: 50px;
+    margin-left: 1%;
 }
 .sct2> .sct2_title> img:nth-child(2){
-    width: 220px;
-    height: 42px;
-}
-.sct2> .sct2_title> img:nth-child(3){
-    margin-top: 10px;
-    width: 450px;
+    margin: 1% 0;
+    width: 50%;
     height: 40px;
 }
 .sct2> .sct2_more{
@@ -113,8 +143,8 @@ section{
     display: flex;
 }
 .sct2> .sct2_more> div:nth-child(1){
-    width: 35%;
     height: 100%;
+    justify-content: space-between;
 }
 .sct2> .sct2_more>div:nth-child(1)> img{
     width: 180px;
@@ -145,10 +175,10 @@ section{
     height: 20px;
 }
 .sct2> .sct2_more> .sct2_memo{
-    width: 55%;
-    height: 95%;
-    margin-left: 60px;
-    margin-top: 15px;
+    flex-grow: 5;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
     background-color: #e3e2e4;
     box-shadow: 1px 3px 5px #333;
     display: flex;
@@ -165,7 +195,7 @@ section{
     height: 65%;
     background-color: #fff;
     margin: 0 auto;
-    border: 1px rgb(154, 154, 154) solid;
+    box-shadow: 0px 2px 5px #333;
 }
 .sct2> .sct2_more> .sct2_memo> div:nth-child(3){
     width: 90%;
@@ -181,13 +211,10 @@ section{
 }
 /*---- 섹션3 ----*/
 #sct3{
-    width: 100%;
-    height: 100vh;
 }
 /*---- 섹션4 ----*/
 #sct4{
-    width: 100%;
-    height: 100vh;
+
 }
 
 
